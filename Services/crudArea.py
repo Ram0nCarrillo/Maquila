@@ -11,7 +11,5 @@ def get():
     areas = SessionLocal().query(Area).all()
     for a in areas:
         print(f"\nId: {a.id}")
-        print(f"\Corte: {a.corte}")
-        print(f"\nEnsamble: {a.ensamble}")
-        print(f"\nEmpaque: {a.empaque}")
-        print(f"\nAcabado: {a.acabado}")
+        print(f"\Departamento: {a.departamento}")
+        print(f"\nDescripcion: {a.descripcion}")

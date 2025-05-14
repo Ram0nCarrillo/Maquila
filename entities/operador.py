@@ -12,8 +12,9 @@ class Operador(Base):
     fecha_ingreso = Column(Date)
     turno = Column(String)
     salario = Column(DECIMAL)
-    # Llaves foraneas y relaciones
-    id_area = Column(Integer, ForeignKey("area.id"))
-    area = relationship("Area", back_populates="operadores")
-    id_supervisor = Column(Integer, ForeignKey("supervisor.id"))
-    supervisor = relationship("Supervisor", back_populates="operadores")
+
+from sqlalchemy.orm import relationship
+id_supervisor = Column(Integer, ForeignKey("supervisor.id"))
+supervisores = relationship("Supervisor", back_populates="operadores")
+id_area = Column(Integer, ForeignKey("area.id"))
+area = relationship("Area", back_populates="operadores")    

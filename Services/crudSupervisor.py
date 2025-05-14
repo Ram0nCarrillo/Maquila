@@ -12,6 +12,7 @@ def get():
         print(f"\nCorreo: {s.correo}")
         print(f"\nTurno: {s.turno}")
         print(f"\nÁrea: {s.area if s.area else 'No asignada'}")
+        
 
         
 def save(nombre, telefono, correo, turno, id_area):
